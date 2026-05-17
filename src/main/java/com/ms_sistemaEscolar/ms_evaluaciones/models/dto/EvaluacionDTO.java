@@ -16,6 +16,8 @@ public class EvaluacionDTO {
     @NotNull
     private LocalDate fechaAplicacion;
 
+    private Double porcentajePond;
+
     @NotNull
-    private double porcentajePond;
+    private int idAsignatura;
 }

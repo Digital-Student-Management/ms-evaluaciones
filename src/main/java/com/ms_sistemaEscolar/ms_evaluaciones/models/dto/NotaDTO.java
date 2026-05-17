@@ -9,10 +9,8 @@ public class NotaDTO {
 
     private int id_nota;
 
-    @NotNull
-    private double valorCalif;
+    private Double valorCalif;
 
-    @NotBlank
     private String formatoNota;
 
     @NotNull
@@ -23,4 +21,7 @@ public class NotaDTO {
 
     @NotNull
     private int idEvaluacion;
+
+    @NotNull
+    private int idEstudiante;
 }
