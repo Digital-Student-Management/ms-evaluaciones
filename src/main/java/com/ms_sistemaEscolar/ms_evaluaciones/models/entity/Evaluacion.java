@@ -18,4 +18,6 @@ public class Evaluacion {
     private LocalDate fecha_aplicacion;
 
     private double porcentaje_pond;
+
+    private int id_asignatura;
 }
