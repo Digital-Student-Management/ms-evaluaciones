@@ -1,0 +1,69 @@
+### ms-evaluaciones · Pruebas REST Client
+### Servidor: http://localhost:8081
+### Extensión requerida: REST Client (humao.rest-client)
+
+# ════════════════════════════════════════════
+#   EVALUACIONES
+# ════════════════════════════════════════════
+
+### [1] Crear evaluación — Examen Final (30% ponderación, asignatura ID 1)
+POST http://localhost:8081/evaluacion
+Content-Type: application/json
+
+{
+  "tituloEv": "Examen Final",
+  "fechaAplicacion": "2026-06-20",
+  "porcentajePond": 30.0,
+  "idAsignatura": 1
+}
+
+###
+
+### [2] Listar todas las evaluaciones
+GET http://localhost:8081/evaluacion
+
+###
+
+### [3] Buscar evaluación por ID
+GET http://localhost:8081/evaluacion/1
+
+###
+
+### [4] Eliminar evaluación por ID
+DELETE http://localhost:8081/evaluacion/1
+
+###
+
+# ════════════════════════════════════════════
+#   NOTAS
+# ════════════════════════════════════════════
+
+### [5] Crear nota — Nota 7.0, formato Examen, 100 puntos (estudiante ID 1, evaluación ID 1)
+POST http://localhost:8081/nota
+Content-Type: application/json
+
+{
+  "valorCalif": 7.0,
+  "formatoNota": "Examen",
+  "puntaje": 100,
+  "observacion": "Excelente desempeño en el examen final.",
+  "idEvaluacion": 1,
+  "idEstudiante": 1
+}
+
+###
+
+### [6] Listar todas las notas
+GET http://localhost:8081/nota
+
+###
+
+### [7] Buscar nota por ID
+GET http://localhost:8081/nota/1
+
+###
+
+### [8] Eliminar nota por ID
+DELETE http://localhost:8081/nota/1
+
+###
